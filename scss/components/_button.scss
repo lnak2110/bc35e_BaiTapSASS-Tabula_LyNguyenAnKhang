@@ -1,0 +1,15 @@
+.purple-btn {
+  @include text($fs1, $fw3, $color2);
+  padding: 15px 60px;
+  border: 1.5px solid transparent;
+  border-radius: 25px;
+  background-color: #b61984;
+  cursor: pointer;
+  transition: 0.5s all;
+
+  &:hover {
+    @include text($fs1, $fw3, $color3);
+    background-color: $color2;
+    border: 1.5px solid $color3;
+  }
+}

@@ -1,0 +1,71 @@
+.findCourse {
+  position: relative;
+  margin-top: 50px;
+
+  .img-container {
+    max-height: 450px;
+    z-index: 10;
+  }
+
+  form {
+    background-color: #fff;
+    width: 75%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+
+    h2 {
+      @include text(30px, $fw4, $color4);
+      margin: 40px 0;
+    }
+
+    .form-row {
+      margin-bottom: 40px;
+    }
+
+    .first-row {
+      justify-content: space-between;
+
+      input {
+        width: 48%;
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      border-radius: 25px;
+    }
+
+    .form-btn {
+      text-align: left;
+      button {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    form {
+      .first-row {
+        flex-direction: column;
+        gap: 30px;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .img-container {
+    margin-bottom: 100px;
+  }
+
+  background-image: url('../images/accent_bottom_wave_01.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

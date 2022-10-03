@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.purple-btn, header nav .btn-phone {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff !important;
+  padding: 15px 60px;
+  border: 1.5px solid transparent;
+  border-radius: 25px;
+  background-color: #b61984;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.purple-btn:hover, header nav .btn-phone:hover {
+  font-size: 13px;
+  font-weight: 500;
+  color: #b61984 !important;
+  background-color: #fff;
+  border: 1.5px solid #b61984;
+}
+
+header {
+  position: relative;
+  padding-bottom: 20px;
+  transition: 0.5s all;
+}
+header nav .navbar-toggler {
+  background-color: #181818;
+}
+header nav .nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #181818 !important;
+  transition: 0.3s all;
+}
+header nav .nav-link.active, header nav .nav-link:hover {
+  color: #b61984 !important;
+}
+header nav .navbar-nav:first-child {
+  margin-right: 30px;
+}
+header nav .navbar-nav:first-child .nav-item {
+  margin-right: 30px;
+}
+header nav .navbar-nav:first-child .nav-item .nav-link {
+  position: relative;
+}
+header nav .navbar-nav:first-child .nav-item .nav-link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: 5;
+  bottom: -4px;
+  margin-left: -4px;
+  top: 40px;
+  left: 50%;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #b61984;
+  transition: 0.3s all;
+  transform: scale(0);
+}
+header nav .navbar-nav:first-child .nav-item .nav-link:hover::after, header nav .navbar-nav:first-child .nav-item .nav-link.active::after {
+  transform: scale(1);
+}
+header nav .navLinks {
+  justify-content: end;
+}
+header nav .navLinks-right {
+  display: flex;
+  align-items: center;
+}
+header nav .btn-phone {
+  border: 1.5px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 20px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 1200px) {
+  header nav .navLinks-right {
+    display: block;
+    margin-top: 20px;
+  }
+  header nav .navLinks-right .navbar-nav {
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  header .show {
+    border-bottom: 2px solid #181818;
+  }
+  header .navbar-nav .nav-link:hover::after, header .navbar-nav .nav-link.active::after {
+    transform: scale(0) !important;
+  }
+  header.fade-in nav {
+    padding: 0 !important;
+  }
+  header.fade-in .navbar-brand {
+    display: block !important;
+  }
+  header.fade-in .navbar-brand img {
+    height: 50px;
+  }
+}
+
+header.fade-in {
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.5);
+  padding: 0;
+}
+header.fade-in nav {
+  padding: 10px;
+}
+header.fade-in nav .navbar-brand {
+  display: none;
+}
+
+.carousel {
+  position: relative;
+  background-image: url("../images/Violet_top_left_wave.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.carousel .row {
+  align-items: center;
+  padding-bottom: 80px;
+}
+.carousel h4 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #b61984 !important;
+  margin-bottom: 10px;
+}
+.carousel h1 {
+  font-size: 57px;
+  font-weight: 700;
+  color: #191919 !important;
+}
+
+.teachers {
+  position: relative;
+  background-color: #dcd1f3;
+  background-image: url("../images/Wave_White_bottom_right_shape_01.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.teachers .item {
+  padding: 20px;
+}
+.teachers .item .item-content {
+  padding: 0;
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.teachers .item .item-content .image {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.teachers .item .item-content .image img {
+  transition: 0.5s all;
+}
+.teachers .item .item-content .image img:hover {
+  transform: scale(1.1);
+}
+.teachers .item .item-content .info {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.3s;
+}
+.teachers .item .item-content .info h4 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #b61984 !important;
+}
+.teachers .item .item-content .info h3 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #191919 !important;
+  margin-bottom: 15px;
+}
+.teachers .item .item-content .info p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #181818 !important;
+}
+.teachers .item .item-content:hover {
+  box-shadow: -3px 11px 16px 0px rgba(145, 136, 145, 0.71);
+}
+.teachers .animate__animated.animate__fadeIn:nth-child(1) {
+  --animate-duration: 1s;
+}
+.teachers .animate__animated.animate__fadeIn:nth-child(2) {
+  --animate-duration: 2s;
+}
+.teachers .animate__animated.animate__fadeIn:nth-child(3) {
+  --animate-duration: 3s;
+}
+.teachers .animate__animated.animate__fadeIn:nth-child(4) {
+  --animate-duration: 4s;
+}
+
+.findCourse {
+  position: relative;
+  margin-top: 50px;
+  background-image: url("../images/accent_bottom_wave_01.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.findCourse .img-container {
+  max-height: 450px;
+  z-index: 10;
+}
+.findCourse form {
+  background-color: #fff;
+  width: 75%;
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+.findCourse form h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #191919 !important;
+  margin: 40px 0;
+}
+.findCourse form .form-row {
+  margin-bottom: 40px;
+}
+.findCourse form .first-row {
+  justify-content: space-between;
+}
+.findCourse form .first-row input {
+  width: 48%;
+}
+.findCourse form input,
+.findCourse form select,
+.findCourse form textarea {
+  border-radius: 25px;
+}
+.findCourse form .form-btn {
+  text-align: left;
+}
+.findCourse form .form-btn button {
+  margin-top: 5px;
+}
+@media screen and (max-width: 992px) {
+  .findCourse form .first-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .findCourse form .first-row input {
+    width: 100%;
+  }
+}
+.findCourse .img-container {
+  margin-bottom: 100px;
+}
+
+footer {
+  padding: 100px 0 200px 0;
+  position: relative;
+  background-image: url("../images/footer_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer h3 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #fff !important;
+  margin-bottom: 30px;
+}
+footer li {
+  list-style: none;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff !important;
+}
+footer li a {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff !important;
+}
+footer .contactUs span {
+  margin-left: 5px;
+}
+footer .quickLinks ul,
+footer .about ul {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+footer .quickLinks ul li,
+footer .about ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+footer .quickLinks ul li a:hover,
+footer .about ul li a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+footer .contact-socials {
+  margin-top: 15px;
+}
+footer .contact-socials a {
+  transition: 0.3s all;
+  margin-right: 10px;
+}
+footer .contact-socials a:hover {
+  color: #181818 !important;
+}
+footer .newsletter .footer-form {
+  text-align: center;
+  width: 100%;
+}
+footer .newsletter .footer-form input {
+  color: #fff;
+  width: 100%;
+  padding: 12px 0;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  outline: none;
+  transition: 0.3s all;
+}
+footer .newsletter .footer-form input::-moz-placeholder {
+  color: #fff;
+}
+footer .newsletter .footer-form input:-ms-input-placeholder {
+  color: #fff;
+}
+footer .newsletter .footer-form input::placeholder {
+  color: #fff;
+}
+footer .newsletter .footer-form input:focus {
+  border: 1px solid #fff;
+}
+footer .newsletter .footer-form .purple-btn, footer .newsletter .footer-form header nav .btn-phone, header nav footer .newsletter .footer-form .btn-phone {
+  width: 100%;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #191919 !important;
+}
+footer .newsletter .footer-form .purple-btn:hover, footer .newsletter .footer-form header nav .btn-phone:hover, header nav footer .newsletter .footer-form .btn-phone:hover {
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff !important;
+}
+@media screen and (max-width: 992px) {
+  footer .contactUs,
+footer .quickLinks {
+    margin-bottom: 30px;
+  }
+}
+footer .animate__animated.animate__fadeIn:nth-child(1) {
+  --animate-duration: 1s;
+}
+footer .animate__animated.animate__fadeIn:nth-child(2) {
+  --animate-duration: 2s;
+}
+footer .animate__animated.animate__fadeIn:nth-child(3) {
+  --animate-duration: 3s;
+}
+footer .animate__animated.animate__fadeIn:nth-child(4) {
+  --animate-duration: 4s;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+// HELPERS
+@import './helpers/variables';
+@import './helpers/mixins';
+
+// BASE
+@import './base/reset';
+@import './base/typography';
+
+// COMPONENTS
+@import './components/button';
+
+// LAYOUTS
+@import './layouts/header';
+@import './layouts/carousel';
+@import './layouts/teachers';
+@import './layouts/findCourse';
+@import './layouts/footer';

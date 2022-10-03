@@ -1,0 +1,113 @@
+footer {
+  padding: 100px 0 200px 0;
+  position: relative;
+
+  h3 {
+    @include text(23px, $fw4, $color2);
+    margin-bottom: 30px;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 12px;
+    @include text(13px, $fw2, $color2);
+
+    a {
+      @include text(13px, $fw2, $color2);
+    }
+  }
+
+  .contactUs {
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  .quickLinks,
+  .about {
+    ul {
+      width: max-content;
+
+      li {
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        a:hover {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .contact-socials {
+    margin-top: 15px;
+
+    a {
+      transition: 0.3s all;
+      margin-right: 10px;
+    }
+
+    a:hover {
+      color: $color1 !important;
+    }
+  }
+
+  .newsletter {
+    .footer-form {
+      text-align: center;
+      width: 100%;
+
+      input {
+        color: $color2;
+        width: 100%;
+        padding: 12px 0;
+        background-color: transparent;
+        text-align: center;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 10px;
+        outline: none;
+        transition: 0.3s all;
+
+        &::placeholder {
+          color: $color2;
+        }
+
+        &:focus {
+          border: 1px solid $color2;
+        }
+      }
+
+      .purple-btn {
+        width: 100%;
+        background-color: $color2;
+        @include text(14px, $fw3, $color4);
+
+        &:hover {
+          border: 1px solid $color2;
+          background-color: transparent;
+          @include text(14px, $fw3, $color2);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .contactUs,
+    .quickLinks {
+      margin-bottom: 30px;
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .animate__animated.animate__fadeIn:nth-child(#{$i}) {
+      --animate-duration: #{$i}s;
+    }
+  }
+
+  background-image: url('../images/footer_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

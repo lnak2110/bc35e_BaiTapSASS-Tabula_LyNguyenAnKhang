@@ -1,0 +1,65 @@
+.teachers {
+  position: relative;
+  background-color: #dcd1f3;
+
+  .item {
+    padding: 20px;
+
+    .item-content {
+      padding: 0;
+      border-radius: 10px;
+      transition: 0.5s all;
+
+      .image {
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        img {
+          transition: 0.5s all;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .info {
+        background-color: $color2;
+        padding: 20px;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: 0.3s;
+
+        h4 {
+          @include text(12px, $fw3, $color3);
+        }
+
+        h3 {
+          @include text(23px, $fw4, $color4);
+          margin-bottom: 15px;
+        }
+
+        p {
+          @include text(15px, $fw2, $color1);
+        }
+      }
+
+      &:hover {
+        box-shadow: -3px 11px 16px 0px rgba(145, 136, 145, 0.71);
+      }
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .animate__animated.animate__fadeIn:nth-child(#{$i}) {
+      --animate-duration: #{$i}s;
+    }
+  }
+
+  background-image: url('../images/Wave_White_bottom_right_shape_01.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
